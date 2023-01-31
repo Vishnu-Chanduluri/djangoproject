@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="POST">{% csrf_token %}
+        <center>
+            <h1>Order here</h1>
+            <h4>You can place an order here {{ request.user.username }}</h4>
+            <br><label>Country :</label>
+            <input type="text" name="country" placeholder="Country" required>
+            <br><label>State :</label>
+            <input type="text" name="state" placeholder="state" required>
+            <br><label>District :</label>
+            <input type="text" name="district" placeholder="District" required>
+            <br><label>Village/Town :</label>
+            <input type="text" name="village" placeholder="Town/Village" required>
+            <br><label>Pincode :</label>
+            <input type="text" name="pincode" placeholder="Pincode" required>
+
+
+
+            <br><label>Payment Method :</label><br>
+            <input type="radio" id="Cash on Delivery" name="fav_language" value="HTML">
+            <label for="html">Cash on Delivery</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">UPI ID</label><br>
+
+
+            <button type="submit">Continue</a>
+
+        </center>
+</body>
+<style>
+*,
+*:before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient( 45deg, #8b51ff, #7a37ff);
+}
+
+form {
+    background-color: #ffffff;
+    width: 450px;
+    padding: 50px 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+label {
+    font-weight: 500;
+    color: #101030;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 12px;
+    border-radius: 5px;
+    outline: none;
+    color: #101010;
+}
+
+#password {
+    margin-bottom: 30px;
+}
+
+input[type='password'] {
+    border: 2px solid #c2c2c2;
+}
+
+input[type='submit'] {
+    background-color: blue;
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #101030;
+    padding-bottom: 5px;
+    text-align: center;
+}
+</style>
+
+</form>
+</html>

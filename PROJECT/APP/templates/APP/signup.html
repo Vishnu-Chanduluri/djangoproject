@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" method="POST">
+        <h2>Signup</h2>
+        {% csrf_token %}
+        <label>Username*</label>
+        <input type="text" id="username" name="username" placeholder="Username" required><br>
+
+        <label>First name*</label>
+        <input type="text" id="fname" name="fname" placeholder="1st_name" required><br>
+
+        <label>Last name*</label>
+        <input type="text" id="lname" name="lname" placeholder="last_name" required><br>
+
+        <label>Email*</label>
+        <input type="email" id="email" name="email" placeholder="Mobile no." required><br>
+
+        <label>Password*</label>
+        <input type="password" id="pass1" name="pass1" placeholder="Password " required><br>
+
+        <label>Confirm Password*</label>
+        <input type="password" id="pass2" name="pass2" placeholder="Confirm Password " required><br><br>
+
+
+        <button type="submit">SignUp</a>
+    </form>
+    <style>
+        body {
+            background-color: aqua;
+        }
+        
+        h1 {
+            color: rgb(15, 1, 11);
+            background-color: rgb(240, 14, 202);
+        }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(231, 8, 197);
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: rgb(2, 0, 6);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        
+        .navbar a.right {
+            float: right;
+        }
+        
+        .navbar a:hover {
+            background-color: rgb(248, 244, 6);
+            color: black;
+        }
+        
+        img {
+            height: 200px;
+            border: 2px solid white;
+            border-radius: 20px;
+            filter: grayscale();
+            transition: 0.3s ease-in-out;
+        }
+        
+        img:hover {
+            filter: none;
+            border-color: rgb(238, 255, 4);
+        }
+        
+        *,
+        *:before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            background: linear-gradient( 45deg, #8b51ff, #7a37ff);
+        }
+        
+        form {
+            background-color: #ffffff;
+            width: 450px;
+            padding: 50px 40px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 8px;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        label {
+            font-weight: 500;
+            color: #101030;
+        }
+        
+        input {
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            padding: 12px;
+            border-radius: 5px;
+            outline: none;
+            color: #101010;
+        }
+        
+        #password {
+            margin-bottom: 30px;
+        }
+        
+        input[type='password'] {
+            border: 2px solid #c2c2c2;
+        }
+        
+        input[type='submit'] {
+            background-color: blue;
+            border: none;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 18px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            color: #101030;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+        button{
+            background-color: #0bebeb;
+        }
+    </style>
+</body>
+
+</html>

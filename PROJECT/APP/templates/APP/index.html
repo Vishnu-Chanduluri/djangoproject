@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+{% load static %}
+
+<body>
+    <center>
+
+
+        {% csrf_token %} {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>{% endfor %}
+
+
+
+        <h1>Welcome to Vishnu's Books Store</h1>
+
+        {% if user.is_authenticated %}
+        <h3>Hello {{ fname }}</h3>
+
+        <div class="navbar">
+
+            <a href="logout" class="right">Logout</a>
+            <a href="myorders" class="right">My orders</a>
+            <a href="profile" class="right">{{ fname }}</a>
+            <a href="home">Home</a>
+            <a href="abt">About us</a>
+            <a href="contact">Contact</a>
+        </div><br><br>
+        <a href="order"><img src={% static "images/booksher.webp" %} alt="not found"></a>
+        <a href="order"><img src={% static "images/book2nd.webp" %} alt="not found"></a>
+        <a href="order"><img src={% static "images/book3.webp" %} alt="not found"></a>
+        <a href="order"><img src={% static "images/book4.webp" %} alt="not found"></a>
+
+
+        {% else %} Don't have an account
+        <br><button type="submit "><a href="/signup ">SignUp</a></button><br>
+        <br> Already have an account
+        <br><button type="submit "><a href="/signin ">Login</a></button>{% endif %}
+
+
+    </center>
+</body>
+<style>
+    body {
+        background: linear-gradient( 45deg, #8b51ff, #7a37ff);
+    }
+    
+    h1 {
+        color: rgb(15, 1, 11);
+    }
+    
+    .navbar {
+        overflow: hidden;
+        background-color: rgb(7, 0, 6);
+    }
+    
+    .navbar a {
+        float: left;
+        display: block;
+        color: rgb(246, 246, 246);
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+    
+    .navbar a.right {
+        float: right;
+    }
+    
+    .navbar a:hover {
+        background-color: rgb(250, 250, 250);
+        color: black;
+    }
+    
+    img {
+        height: 200px;
+        border: 2px solid white;
+        border-radius: 20px;
+        filter: grayscale();
+        transition: 0.3s ease-in-out;
+    }
+    
+    img:hover {
+        filter: none;
+        border-color: rgb(238, 255, 4);
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
+
+</html>
